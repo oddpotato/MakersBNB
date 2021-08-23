@@ -1,29 +1,49 @@
-<h1>What is this?</h1>
+Welcome to MakersBNB!
 
-This repo is a template for creating local environments for web apps. The following steps will be needed to complete installation:
+Description: This application allows hosts and guests to come together and make bookings.
 
-1. Install gems with 'bundle install'
-2. Initialize rspec with 'rspec --init'
+~ User stories ~
 
-<i>NOTE - You will need to change the spec_helper line Capybara.app = BookmarkManager to whichever name is relevant to your project.</i>
+As a user
+I want to sign up
+So I can use MakersBNB.
 
-To make a new test database you will need to do the following on the repo:
+As a host
+I want to add listings
+So I can make money.
 
-1. Edit the 'setup test database' file to contain the correct database name
+As a guest
+I want to view available listings
+So that I can plan my stay.
 
-2. Add this to your spec helper file, before your required gem list
+As a guest
+I do not want to view unavailable listings
+So that I can plan my stay.
 
-        require_relative './setup_test_database'
+As a guest
+I want to filter my listing
+So that I can narrow my search.
 
-        ENV['ENVIRONMENT'] = 'test'
+As a guest
+I want to make bookings
+So I can stay somewhere.
 
-        RSpec.configure do |config|
-          config.before(:each) do
-            setup_test_database
-          end
-        end
+As a host
+I want to have a name and description of the space
+So that guests will want to stay there.
 
+As a host
+I want to set the price per night
+So that guests know how much my space costs.
 
-3. Remember to put any sql used to create tables in db/migrations
+As a host
+I want to be able to specify the dates available
+So that guests can know the availability of my space.
 
-4. Update the App name in config.ru (run <appname>)
+As a host
+I want to be able to approve or reject requests
+So that I can control who books my space.
+
+As a host
+I want my listings to be available until booking is confirmed
+So that I can maximise my potential earnings.
