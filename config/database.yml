@@ -1,16 +1,12 @@
-production:
+default: &default
   adapter: postgresql
   encoding: unicode
-  database: makersbnb
-  pool: 2
-  #username: appscat
-  #password: your_password
+  host: localhost
 
 development:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: makersbnb_test
-  pool: 2
-  #username: appscat
-  #password: your_password
 
+production:
+  <<: *default
+  database: makersbnb
