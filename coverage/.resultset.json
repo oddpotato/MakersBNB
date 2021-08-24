@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/ahsanrasul/Programming/MakersBNB/spec/features/launching_app_spec.rb": {
+      "/Users/eb/Projects/week5/MakersBNB/spec/features/launching_app_spec.rb": {
         "lines": [
           null,
           null,
@@ -15,10 +15,16 @@
           null
         ]
       },
-      "/Users/ahsanrasul/Programming/MakersBNB/spec/features/login_spec.rb": {
+      "/Users/eb/Projects/week5/MakersBNB/spec/features/login_spec.rb": {
         "lines": [
           1,
           1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           1,
@@ -28,6 +34,6 @@
         ]
       }
     },
-    "timestamp": 1629797978
+    "timestamp": 1629799724
   }
 }

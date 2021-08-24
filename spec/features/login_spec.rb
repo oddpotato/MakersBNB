@@ -5,4 +5,10 @@ feature 'login' do
     expect(page).to have_content('Password')
     expect(page).to have_button('Submit')
   end
+
+  scenario 'logo has navigation' do
+    visit('/sessions/new')
+    click_on('logo')
+    expect(page).to have_content('Hello World!')
+  end
 end
