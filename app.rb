@@ -3,7 +3,7 @@ require "sinatra/base"
 require "sinatra/reloader" if development?
 
 #class INSERT CLASS NAME < Sinatra::Base
-class BookmarkManager < Sinatra::Base
+class MakersBNB < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end

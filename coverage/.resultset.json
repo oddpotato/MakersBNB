@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/appscat/Projects/WebAppTemplate/spec/features/launching_app_spec.rb": {
+      "/Users/appscat/Projects/MakersBNB/MakersBNB/spec/features/launching_app_spec.rb": {
         "lines": [
           null,
           null,
@@ -16,6 +16,6 @@
         ]
       }
     },
-    "timestamp": 1629287917
+    "timestamp": 1629797893
   }
 }
