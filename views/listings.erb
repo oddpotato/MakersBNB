@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makers BnB</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="/"><img class="logo" src="/images/makersbnblogo.png" alt="MakersBNB logo" height="100px"></a>
+    <nav>
+      <ul>
+        <li>Listings</li>
+        <li>   |    </li>
+        <li>Requests</li>
+        <li>   |    </li>
+        <li>Sign out</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1> 
+      Book a space 
+    </h1>
+    <h4>
+    <form action='/listings' method='get'>
+    <section class='dates'>
+    <div style="float:left;margin-left:30%; margin-right:20px;">
+      <label class='dates' for='from'>Avaliable from (DD/MM/YY)</label><br>
+      <input type='date' id ='from' name='avaliable_from'
+              value="2021-08-24"
+              min="2021-08-01" max="2040-12-31">
+      </div>
+      <div style="float:left;">
+      <label class='dates' for='to'>Avaliable to (DD/MM/YY)</label><br>
+            <input type='date' id ='to' name='avaliable_to'
+             value="2021-08-24"
+             min="2021-08-01" max="2040-12-31">
+      </div style="float:left;">
+      <input id="listing-search" type='submit' value='Search'>
+    </section>
+    </form>
+    <h4>
+  </main>
+</body>
+</html>
