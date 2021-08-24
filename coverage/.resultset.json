@@ -60,7 +60,8 @@
           1,
           1,
           1,
-          0,
+          1,
+          1,
           null,
           null,
           null,
@@ -70,14 +71,12 @@
       "/Users/eb/Projects/week5/MakersBNB/lib/user.rb": {
         "lines": [
           1,
-          null,
           1,
-          null,
-          null,
+          1,
           null
         ]
       }
     },
-    "timestamp": 1629817391
+    "timestamp": 1629817882
   }
 }
