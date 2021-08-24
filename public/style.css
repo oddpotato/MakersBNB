@@ -136,3 +136,9 @@ input {
   width: 80%;
   cursor: pointer;
 }
+
+.container {
+  border-radius: 10px;
+  background-color: antiquewhite;
+  padding: 20px
+}
