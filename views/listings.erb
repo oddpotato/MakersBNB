@@ -15,7 +15,7 @@
     <a href="/"><img class="logo" src="/images/makersbnblogo.png" alt="MakersBNB logo" height="100px"></a>
     <nav>
       <ul>
-        <li>Listings</li>
+        <li><a href="/listings">Listings</li></a>
         <li>   |    </li>
         <li>Requests</li>
         <li>   |    </li>
@@ -25,7 +25,13 @@
   </header>
   <main>
     <h1> 
-      Book a space 
+    Book a space 
+    <h2>
+    <form action='/listings/new' method='get'>
+      <label for='list'>or maybe</label><br>
+      <input type="submit" id='list' value="List a space" class="btn" >
+      </form>
+    <h2>
     </h1>
     <h4>
     <form action='/listings' method='get'>

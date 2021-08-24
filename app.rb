@@ -35,5 +35,9 @@ class MakersBNB < Sinatra::Base
     erb :listings
   end
 
+  get '/listings/new' do
+    "this is where new listings will be added"
+  end
+
   run! if app_file == $0
 end

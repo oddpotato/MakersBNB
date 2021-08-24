@@ -7,5 +7,9 @@ feature 'listings page' do
     expect(page).to have_button('Search')
   end
 
-  # scenario 'displays page containing listings'
+  scenario 'can navigate to list a space' do
+    visit('/listings')
+    click_button('List a space')
+    expect(page).to have_current_path('/listings/new')
+  end
 end
