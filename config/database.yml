@@ -1,0 +1,12 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+
+development:
+  <<: *default
+  database: makersbnb_test
+
+production:
+  <<: *default
+  database: makersbnb

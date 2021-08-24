@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
@@ -13,8 +11,9 @@ gem 'sinatra'
 gem 'sinatra-contrib', require: false
 gem 'sinatra-activerecord'
 gem 'sinatra-flash'
+gem 'rake'
 
-group :development, :test do
+group :test do
   gem 'pry'
   gem "rubocop", "0.79.0"
   gem 'rack'
