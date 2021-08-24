@@ -1,3 +1,11 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: makersbnb
+  pool: 2
+  #username: appscat
+  #password: your_password
+
 development:
   adapter: postgresql
   encoding: unicode
@@ -6,10 +14,3 @@ development:
   #username: appscat
   #password: your_password
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: makersbnb
-  pool: 2
-  #username: appscat
-  #password: your_password
