@@ -3,6 +3,8 @@ require "sinatra/activerecord"
 require "sinatra/base"
 require "sinatra/reloader" if development?
 require "sinatra/flash"
+require_relative "./lib/user"
+require_relative "./lib/listing"
 
 class MakersBNB < Sinatra::Base
   configure :development do
@@ -32,12 +34,17 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/listings' do
-    #listings = Listings.all
+    @listings = Listing.all
     erb :listings
   end
 
   get '/listings/new' do
     "this is where new listings will be added"
+  end
+
+  post "/listings/:id" do
+    @listings_id = params[:id]
+    erb :'listings/view'
   end
 
   run! if app_file == $0
