@@ -8,13 +8,15 @@ class ApplicationController < Sinatra::Base
 
     configure :development do
       register Sinatra::Reloader
+      set :views, 'app/views'
     end
   
     enable :sessions
+    
     register Sinatra::Flash
   
     get '/' do
-      'Hello People!'
+      erb :index
     end 
   
     run! if app_file == $0
