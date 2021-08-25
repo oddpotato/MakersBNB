@@ -42,5 +42,10 @@ class MakersBNB < Sinatra::Base
     "this is where new listings will be added"
   end
 
+  post "/listings/:id" do
+    @listings_id = params[:id]
+    erb :'listings/view'
+  end
+
   run! if app_file == $0
 end

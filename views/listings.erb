@@ -49,19 +49,22 @@
           <input id="listing-search" type='submit' value='Search'>
         </section>
       </form>
-
-      <% @listings.each do |listing| %>
-        <div class="w3-container">
-          <div class="w3-card-4" style="width:70%">
-            <h3><%=listing.title%></h3>
-            <div class="w3-container">
-              <p><%=listing.description%></p>
-              <p><%=listing.price%></p>
-            </div>
-            <a href=<%"/listing/#{listing.id}"%> class="w3-button w3-block w3-dark-grey">Link Button</a>
-          </div> 
-        </div>
-      <%end%>
+      <div class="w3-container">
+        <h2>Listings</h2>
+          <% @listings.each do |listing| %>
+            <div class="w3-card-4" style="width:70%">
+              <h3><%=listing.title%></h3>
+              <div class="w3-container">
+                <p><%=listing.description%></p>
+                <p><%=listing.price%></p>
+              </div>
+              <form action='listings/<%=listing.id%>' method='post'>
+                <input type='hidden' name='id' value="<%=listing.id%>">
+                <input type='submit' class="w3-button w3-block w3-dark-grey" value="Link Button">
+              </form>
+            </div> 
+          <%end%>
+      </div>
     </main>
   </body>
 </html>
