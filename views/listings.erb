@@ -52,22 +52,19 @@
           <input id="listing-search" type='submit' value='Search'>
         </section>
       </form>
-      <%# <% listings.each do |listing| %>
-      <%# <div class="w3-container">
-        
+
+      <% @listings.each do |listing| %>
+        <div class="w3-container">
           <div class="w3-card-4" style="width:70%">
-            <header class="w3-container w3-light-grey">
-              <%# <h3><%=listing.title%></h3>
-            </header>
+            <h3><%=listing.title%></h3>
             <div class="w3-container">
               <p><%=listing.description%></p>
               <p><%=listing.price%></p>
             </div>
             <a href=<%"/listing/#{listing.id}"%> class="w3-button w3-block w3-dark-grey">Link Button</a>
-          </div> %>
-        
-      </div> %>
-      <%end%> %>
+          </div> 
+        </div>
+      <%end%>
     </main>
   </body>
 </html>
