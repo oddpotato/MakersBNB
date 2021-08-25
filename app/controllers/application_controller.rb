@@ -4,6 +4,7 @@ require "sinatra/base"
 require "sinatra/reloader" if development?
 require "sinatra/flash"
 require "./lib/listing.rb"
+require "./lib/booking.rb"
 require "./lib/user.rb"
 
 class ApplicationController < Sinatra::Base
@@ -52,6 +53,14 @@ class ApplicationController < Sinatra::Base
       erb :'listings/view'
     end
     
+    post "/book" do
+      booking = Booking.create(user_id: params[:user_id], listing_id: params[:listing_id], date_booked: params[:booking_date], confirmed: nil)
+      redirect('/requests')
+    end
+
+    get "/requests" do
+      "this is where you'll be able to see all your requests"
+      
     post '/signup' do
     # check email isn't already in DB
     # assuming no...
