@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/ahsanrasul/Programming/MakersBNB/spec/features/launching_app_spec.rb": {
+      "/Users/appscat/Projects/MakersBNB/MakersBNB/spec/features/launching_app_spec.rb": {
         "lines": [
           null,
           null,
@@ -15,7 +15,7 @@
           null
         ]
       },
-      "/Users/ahsanrasul/Programming/MakersBNB/spec/features/listings_page_spec.rb": {
+      "/Users/appscat/Projects/MakersBNB/MakersBNB/spec/features/login_spec.rb": {
         "lines": [
           1,
           1,
@@ -23,9 +23,16 @@
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          1,
+          1,
           1,
           null,
           null,
+          1,
+          1,
           1,
           1,
           1,
@@ -34,33 +41,55 @@
           null
         ]
       },
-      "/Users/ahsanrasul/Programming/MakersBNB/spec/features/login_spec.rb": {
+      "/Users/eb/Projects/week5/MakersBNB/spec/units/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/eb/Projects/week5/MakersBNB/lib/user.rb": {
         "lines": [
           1,
           1,
           1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
           null
         ]
       }
     },
-    "timestamp": 1629826695
+    "timestamp": 1629839092
   }
 }

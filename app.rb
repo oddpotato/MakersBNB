@@ -1,9 +1,9 @@
 require "sinatra"
+require "sinatra/activerecord"
 require "sinatra/base"
 require "sinatra/reloader" if development?
 require "sinatra/flash"
 
-#class INSERT CLASS NAME < Sinatra::Base
 class MakersBNB < Sinatra::Base
   configure :development do
     register Sinatra::Reloader

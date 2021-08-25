@@ -22,7 +22,7 @@ group :test do
 end
 
 
-gem 'activerecord', '6.1.4'
+#gem 'activerecord', '6.1.4'
 gem 'bcrypt'
 gem 'dotenv'
 gem 'require_all'
