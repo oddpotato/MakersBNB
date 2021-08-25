@@ -32,6 +32,7 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/listings' do
+    #listings = Listings.all
     erb :listings
   end
 
