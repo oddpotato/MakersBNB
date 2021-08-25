@@ -52,7 +52,7 @@
       <div class="w3-container">
         <h2>Listings</h2>
           <% @listings.each do |listing| %>
-            <div class="w3-card-4" style="width:70%">
+            <div class="w3-panel w3-card-4" style="width:70%" id='listings'>
               <h3><%=listing.title%></h3>
               <div class="w3-container">
                 <p><%=listing.description%></p>
