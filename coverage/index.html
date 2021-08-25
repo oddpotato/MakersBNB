@@ -82,6 +82,7 @@
           </tr>
         
           <tr class="t-file">
+
             <td class="strong t-file__name"><a href="#e24b67922b63d7d7e1baa2434ebda443d5c2c36e" class="src_link" title="spec/features/login_spec.rb">spec/features/login_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">22</td>
@@ -120,7 +121,6 @@
 
       <div class="source_files">
       
-<<<<<<< HEAD
         <div class="source_table" id="15643cd419b02559ec8d08158a0452f6f51d05ba">
   <div class="header">
     <h3>lib/user.rb</h3>
@@ -273,7 +273,7 @@
 
             
 
-            <code class="ruby">    it &quot;expects the page to say Hello World&quot; do</code>
+            <code class="ruby">  it &quot;expects the page to say Hello World&quot; do</code>
           </li>
         </div>
       
@@ -284,7 +284,7 @@
 
             
 
-            <code class="ruby">      visit(&#39;/&#39;)</code>
+            <code class="ruby">    visit(&#39;/&#39;)</code>
           </li>
         </div>
       
@@ -295,7 +295,7 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content &#39;Hello World!&#39;</code>
+            <code class="ruby">    expect(page).to have_content &#39;Hello World!&#39;</code>
           </li>
         </div>
       
@@ -306,7 +306,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -317,7 +317,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">end</code>
           </li>
         </div>
       
@@ -337,11 +337,205 @@
 </div>
 
       
-<<<<<<< HEAD
-        <div class="source_table" id="d74cdc6fdbe1bd5a4ea503955d6a3d1c5667a93c">
-=======
+        <div class="source_table" id="e1859fe61097d4dad09b0ddc11ff22b1d834e48d">
+  <div class="header">
+    <h3>spec/features/listings_page_spec.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>11</b> relevant lines.
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">feature &#39;listings page&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  scenario &#39; page has date filter capability&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit(&#39;/listings&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_css(&#39;h1&#39;, text: &#39;Book a space&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_field(&#39;from&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_field(&#39;to&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_button(&#39;Search&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  scenario &#39;can navigate to list a space&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit(&#39;/listings&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    click_button(&#39;List a space&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_current_path(&#39;/listings/new&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+
         <div class="source_table" id="e24b67922b63d7d7e1baa2434ebda443d5c2c36e">
->>>>>>> 09f3ba4 (adding changes)
+
   <div class="header">
     <h3>spec/features/login_spec.rb</h3>
     <h4>
