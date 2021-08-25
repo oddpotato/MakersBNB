@@ -47,8 +47,11 @@ class ApplicationController < Sinatra::Base
   
     post "/listings/:id" do
       @listings_id = params[:id]
+      @listing = Listing.find_by(id: @listings_id)
       erb :'listings/view'
     end
+    
+
   
     run! if app_file == $0
   end

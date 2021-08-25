@@ -60,7 +60,7 @@
               </div>
               <form action='listings/<%=listing.id%>' method='post'>
                 <input type='hidden' name='id' value="<%=listing.id%>">
-                <input type='submit' class="w3-button w3-block w3-dark-grey" value="Link Button">
+                <input type='submit' name='<%=listing.id%>'class="w3-button w3-block w3-dark-grey" value="Link Button">
               </form>
             </div> 
           <%end%>
