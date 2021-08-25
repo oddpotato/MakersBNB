@@ -24,24 +24,16 @@
     </nav>
   </header>
   <main>
-    <h1> 
-      <%=@listing.title%>
-    </h1>
-    <h2> 
-      <p>
-        <%=@listing.description%>
-      </p>
-      <p>
-        £<%=@listing.price%> per night
-      </p>
-      <form action='/book' method='post'>
-        <input type='date' name='booking_date'
+    <h1><%=@listing.title%></h1>
+    <p><%=@listing.description%></p>
+    <p>£<%=@listing.price%> per night</p>
+    <form action='/book' method='post'>
+      <input type='date' name='booking_date'
                 min='<%=@listing.dates_available.first%>'
                 max='<%=@listing.dates_available.last%>'>
-
-        <input type='hidden' name='listing_id' value="<%=@listing.id%>">
-        <input type='hidden' name='user_id' value="<%=@user_id%>">
-        <input id="request-submit" class="btn" type='submit' value='Request booking'>
+      <input type='hidden' name='listing_id' value="<%=@listing.id%>">
+      <input type='hidden' name='user_id' value="<%=@user_id%>">
+      <input id="request-submit" class="btn" type='submit' value='Request booking'>
     </form>
   </main>
 </body>

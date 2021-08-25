@@ -5,6 +5,7 @@ require "sinatra/reloader" if development?
 require "sinatra/flash"
 require "./lib/listing.rb"
 require "./lib/booking.rb"
+require "./lib/user.rb"
 
 class ApplicationController < Sinatra::Base
 
@@ -46,8 +47,7 @@ class ApplicationController < Sinatra::Base
       "this is where new listings will be added"
     end
   
-    post "/listings/:id" do
-      @user_id = session[:user_id]
+    post '/listings/:id' do
       @listings_id = params[:id]
       @listing = Listing.find_by(id: @listings_id)
       erb :'listings/view'
@@ -60,6 +60,12 @@ class ApplicationController < Sinatra::Base
 
     get "/requests" do
       "this is where you'll be able to see all your requests"
+      
+    post '/signup' do
+    # check email isn't already in DB
+    # assuming no...
+      user = User.create(name: params[:name], email: params[:email], password_digest: params[:password])
+      erb :listings
     end
   
     run! if app_file == $0

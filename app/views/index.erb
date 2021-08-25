@@ -1,1 +1,37 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makers BnB</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="/style.css" type = "text/css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="/"><img class="logo" src="/images/makersbnblogo.png" alt="MakersBNB logo" height="100px"></a>
+    <nav>
+      <ul>
+        <li>About</li>
+        <li>   |   </li>
+        <li>Login</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Sign Up To MakersBNB</h1>
+    <form action='/signup' method='post'>
+      <label for='name' class='signup'>Name: </label>
+      <input class='signup' type='text' name='name' required>
+      <label for='email' class='signup'>Email Address: </label>
+      <input class='signup' type='email' id ='email' name='email' required>
+      <label for='password' class='signup'>Password:</label>
+      <input class='signup' type='password' name='password' required>
+      <input id="signup-submit" class="btn" type='submit' value='Submit'>
+    </form>
+  </main>
+</body>
+</html>

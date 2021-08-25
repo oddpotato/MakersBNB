@@ -3,17 +3,116 @@ require 'sinatra/activerecord'
 require_all 'lib'
 
 users = [
-  { name: 'S. A. McQuanzie',
-    email: 'mcquanzie@example.com',
-    password_digest: 'V3ryS3cur3P4ssw0rd'
+    
+  { name: 'Mendel Durie',
+    email: 'mdurie0@drupal.org',
+    password_digest: 'dQlRIF'
   },
 
-  { name: 'David',
-    email: 'superdave__123@hotmail.com',
-    password_digest: 'V3ryS3cur3P4ssw0rd'
+  { name: 'Almire Brockie',
+    email: 'abrockie1@google.com',
+    password_digest: 'eNc89tRUyB'
+  },
+
+  { name: 'Heinrik Ferguson',
+    email: 'hferguson2@slate.com',
+    password_digest: '9GwfNyEE'
+  },
+
+  { name: 'Doralynn Ballin',
+    email: 'dballin3@telegraph.co.uk',
+    password_digest: '0sjQhG2DvXgk'
+  },
+
+  { name: 'Isac Stanyon',
+    email: 'istanyon4@buzzfeed.com',
+    password_digest: 'nL3216JPCg'
+  },
+
+  { name: 'Deidre Macbane',
+    email: 'dmacbane5@nps.gov',
+    password_digest: 'VNkfR6i'
+  },
+
+  { name: 'Zara Schirak',
+    email: 'zschirak6@patch.com',
+    password_digest: 'DtUnFuUmTonn'
+  },
+
+  { name: 'Tedra Bevan',
+    email: 'tbevan7@1688.com',
+    password_digest: 'Kn2Tq0EFiF16'
+  },
+
+  { name: 'Pierrette Rainy',
+    email: 'prainy8@arstechnica.com',
+    password_digest: 'hkPbw9oyBwr'
+  },
+
+  { name: 'Abby Nowland',
+    email: 'anowland9@topsy.com',
+    password_digest: 'g3rKXKv'
   }
 ]
 
+listings = [
+
+  { title: 'Hobbit Hole',
+    description: 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.',
+    price: 86.57,
+    dates_available: [9/4/2021],
+    user_id: 1
+  },
+  
+  { title: 'Bo Burnham\'s Guest House',
+    description: "In congue. Etiam justo. Etiam pretium iaculis justo.
+
+    In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+    price: 144.57,
+    dates_available: [3/25/2021],
+    user_id: 5
+  },
+
+  { title: '10 Downing Street',
+    description: "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
+
+    Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+    
+    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    price: 166.55,
+    dates_available: [7/14/2021],
+    user_id: 10
+  },
+
+]
+
+bookings = [
+
+    { user_id: 10,
+    listing_id: 1,
+    date_booked: 12/26/2021,
+    confirmed: true,
+    },
+
+    { user_id: 2,
+    listing_id: 3,
+    date_booked: 9/21/2021,
+    confirmed: false,
+    },
+
+    { user_id: 8,
+    listing_id: 2,
+    date_booked: 11/9/2020,
+    },
+    
+    { user_id: 6,
+    listing_id: 1,
+    date_booked: 9/29/2021,
+    confirmed: true,
+    }
+    
+]
+
 users.each { |user| User.create(user) }
-Listing.create({ title: 'Hobbit Hole', description: 'It\'s very nice here', dates_available: [2021-8-31], user_id: 1 })
-Booking.create({ user_id: 2, listing_id: 1, date_booked: 2021-8-31, confirmed: TRUE })
+listings.each { |listing| Listing.create(listing) }
+bookings.each { |booking| Booking.create(booking) }

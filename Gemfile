@@ -26,5 +26,6 @@ end
 gem 'activerecord', '6.1.4'
 gem 'bcrypt'
 gem 'dotenv'
+gem 'nokogiri'
 gem 'require_all'
 gem 'webrick'
