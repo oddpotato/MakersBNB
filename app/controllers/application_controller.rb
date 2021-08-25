@@ -60,6 +60,7 @@ class ApplicationController < Sinatra::Base
 
     get "/requests" do
       "this is where you'll be able to see all your requests"
+    end
       
     post '/signup' do
     # check email isn't already in DB
