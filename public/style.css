@@ -5,9 +5,14 @@ body {
 
 main {
   text-align: center;
+  display: block;
+  padding: 48px 0;
 }
 
 h1 {
+  width: 100%; 
+  text-align: center;
+  margin: 0 auto;
   font-family: 'Staatliches', cursive;  
   font-size: 300%;
 }
@@ -32,11 +37,7 @@ label.login {
   display: block;
 }
 
-section.dates {
-  display: block
-}
-
-input {
+input.login {
   margin: 8px;
   padding: 4px;
 }
@@ -45,41 +46,27 @@ input {
   padding: 24px;
 }
 
-#login-submit {
-  display: block;
-  margin: 24px auto;
-  background: #70d934;
-  background-image: -webkit-linear-gradient(top, #70d934, #2bb82f);
-  background-image: -moz-linear-gradient(top, #70d934, #2bb82f);
-  background-image: -ms-linear-gradient(top, #70d934, #2bb82f);
-  background-image: -o-linear-gradient(top, #70d934, #2bb82f);
-  background-image: linear-gradient(to bottom, #70d934, #2bb82f);
-  -webkit-border-radius: 12;
-  -moz-border-radius: 12;
-  border-radius: 12px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
+.dates {
+  display: inline-block; 
+  margin: 40px; auto;
 }
 
-#login-submit:hover {
-  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-  cursor: pointer;
-  text-decoration: none;
+.listings-from {
+  display: block;
+  float: left;
+  margin: 20px;
+}
+
+.listings-to {
+  display: block;
+  float: left;
+  margin: 20px;
 }
 
 #listing-search {
   display: block;
   float: left;
-  margin-left: 20px;
-  margin-top: 20px;
+  margin: 20px;
   background: #2cb8ac;
   background-image: -webkit-linear-gradient(top, #2cb8ac, #2bb82f);
   background-image: -moz-linear-gradient(top, #2cb8ac, #2bb82f);
@@ -108,6 +95,8 @@ input {
 }
 
 .btn {
+  display: block;
+  margin: 24px auto;
   background: #2cb8ac;
   background-image: -webkit-linear-gradient(top, #2cb8ac, #2bb82f);
   background-image: -moz-linear-gradient(top, #2cb8ac, #2bb82f);
@@ -122,7 +111,6 @@ input {
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
-  width: 80%;
 }
 
 .btn:hover {
@@ -133,12 +121,13 @@ input {
   background-image: -o-linear-gradient(top, #3cfc89, #3498db);
   background-image: linear-gradient(to bottom, #3cfc89, #3498db);
   text-decoration: none;
-  width: 80%;
   cursor: pointer;
 }
 
-.container {
-  border-radius: 10px;
-  background-color: antiquewhite;
-  padding: 20px
+#or-maybe {
+  margin: 0 auto;
+}
+
+#list {
+  margin: 0 auto;
 }
