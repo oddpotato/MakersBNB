@@ -9,7 +9,7 @@ feature 'login' do
   scenario 'logo has navigation' do
     visit('/sessions/new')
     click_on('logo')
-    expect(page).to have_content('Hello World!')
+    expect(page).to have_content('Hello People!')
   end
 
   scenario 'displays message if incorrect login details are used' do

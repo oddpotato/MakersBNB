@@ -15,6 +15,6 @@ feature 'listings page' do
 
   scenario 'can see listings' do
     visit('/listings')
-    expect(page).to have_content
+    expect(page).to have_content('Hobbit Hole')
   end
 end

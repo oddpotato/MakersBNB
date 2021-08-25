@@ -23,7 +23,7 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/sessions' do
-    user = nil # User.authenticate(email: params[:email], password: params[:password])
+    user = User.authenticate(email: params[:email], password: params[:password])
     if user
       session[:user_id] = user.id
       redirect('/listings')      
@@ -44,6 +44,7 @@ class MakersBNB < Sinatra::Base
 
   post "/listings/:id" do
     @listings_id = params[:id]
+    @listing = Listing.find_by(id: @listings_id)
     erb :'listings/view'
   end
 
