@@ -23,6 +23,7 @@
   </header>
   <main>
     <h1>Sign Up To MakersBNB</h1>
+    <%= flash[:notice1]%>
     <form action='/signup' method='post'>
       <label for='name' class='signup'>Name: </label>
       <input class='signup' type='text' name='name' required>

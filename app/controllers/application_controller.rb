@@ -44,15 +44,15 @@ class ApplicationController < Sinatra::Base
 
     get '/listings' do
       @listings = Listing.all
-      @available_from = params[:available_from] || "2021-08-26"
-      @available_to = params[:available_to] || "2021-08-27"
-      @date_range = [*@available_from..@available_to]
-      @result = Listing.where(dates_available: @date_range)
-      # @result = Listing.where(:dates_available => @date_range)
-      # p result
-      # @result = Listing.select(:dates_available)
-      # p "hello"
-      p @result
+      # @available_from = params[:available_from] || "2021-08-26"
+      # @available_to = params[:available_to] || "2021-08-27"
+      # @date_range = [*@available_from..@available_to]
+      # @result = Listing.where(dates_available: @date_range)
+      # # @result = Listing.where(:dates_available => @date_range)
+      # # p result
+      # # @result = Listing.select(:dates_available)
+      # # p "hello"
+      # p @result
       erb :'listings/index'
     end
 
@@ -89,9 +89,15 @@ class ApplicationController < Sinatra::Base
       
     post '/signup' do
     # check email isn't already in DB
-    # assuming no...
-      user = User.create(name: params[:name], email: params[:email], password_digest: params[:password])
-      erb :'listings/index'
+    @email = params[:email]
+      if User.exists?(email: @email)
+        flash[:notice1] = 'Email already in use'
+        redirect('/')
+      else  # assuming no...
+        user = User.create(name: params[:name], email: @email, password_digest: params[:password])
+        session[:user_id] = user.id
+        redirect('/listings')
+      end
     end
   
     run! if app_file == $0
