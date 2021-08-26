@@ -27,7 +27,7 @@ class ApplicationController < Sinatra::Base
     end
 
     post '/sessions' do
-      user = nil # User.authenticate(email: params[:email], password: params[:password])
+      user = User.find_by email: params[:email]
       if user
         session[:user_id] = user.id
         redirect('/listings')      
