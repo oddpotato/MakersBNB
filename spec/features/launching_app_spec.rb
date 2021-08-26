@@ -4,7 +4,7 @@
 feature 'Index page' do
   it "expects the page to say Hello World" do
     visit('/')
-    expect(page).to have_content 'MakersBNB'
+    expect(page).to have_content 'Book a space'
   end
 end
   

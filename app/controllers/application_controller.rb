@@ -28,7 +28,6 @@ class ApplicationController < Sinatra::Base
     end
 
     get '/sessions/new' do
-         # erb :homepage
          erb :index
     end
 
