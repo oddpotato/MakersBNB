@@ -19,4 +19,13 @@ feature 'login' do
     click_on('Submit')
     expect(page).to have_content('Incorrect email or password')
   end
+
+  scenario 'existing user can log in' do
+    visit('/sessions/new')
+    fill_in('email', with: 'dballin3@telegraph.co.uk')
+    fill_in('password', with: '0sjQhG2DvXgk')
+    click_on('Submit')
+    expect(page).not_to have_content('Incorrect email or password')
+    # expect(page).to have_content('Requests')
+  end
 end

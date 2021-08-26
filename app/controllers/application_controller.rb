@@ -23,13 +23,17 @@ class ApplicationController < Sinatra::Base
       erb :index
     end 
 
+    get '/about' do
+      erb :about
+    end
+    
     get '/sessions/new' do
       erb :login
     end
 
     post '/sessions' do
-      user = nil # User.authenticate(email: params[:email], password: params[:password])
-      if user
+      user = User.find_by(email: params[:email])
+      if user && user.password_digest == params[:password]
         session[:user_id] = user.id
         redirect('/listings')      
       else

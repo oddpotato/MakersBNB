@@ -26,10 +26,11 @@
     </header>
     <main>
       <h1> Book a space </h1>
-      <h2 id="or-maybe">Or Maybe</h2>
-      <form action='/listings/new' method='get'>
-        <input type="submit" id='list' value="List a space" class="btn" >
-      </form>
+        <h2 id="or-maybe">Or Maybe</h2>
+          <form action='/listings/new' method='get'>
+            <input type="submit" id='list' value="List a space" class="btn" >
+          </form>
+
       <section class='dates'>
         <form action='/listings' method='get'>
           <div class="listings-from">
@@ -50,21 +51,18 @@
       </form>
       <div class="w3-container">
         <h2>Listings</h2>
-
-          <% if @listings %>
-            <% @listings.each do |listing| %>
-              <div class="w3-card-4" style="width:70%">
-                <h3><%=listing.title%></h3>
-                <div class="w3-container">
-                  <p><%=listing.description%></p>
-                  <p><%=listing.price%></p>
-                </div>
-                <form action='listings/<%=listing.id%>' method='post'>
-                  <input type='hidden' name='id' value="<%=listing.id%>">
-                  <input type='submit' name='<%=listing.id%>'class="w3-button w3-block w3-dark-grey" value="Link Button">
-                </form>
-              </div> 
-            <%end%>
+          <% @listings.each do |listing| %>
+            <div class="w3-card-4" style="width:70%">
+              <h3><%=listing.title%></h3>
+              <div class="w3-container">
+                <p><%=listing.description%></p>
+                <p><%=listing.price%></p>
+              </div>
+              <form action='listings/<%=listing.id%>' method='post'>
+                <input type='hidden' name='id' value="<%=listing.id%>">
+                <input type='submit' name='<%=listing.id%>'class="w3-button w3-block w3-dark-grey" value="Link Button">
+              </form>
+            </div> 
           <%end%>
       </div>
     </main>
