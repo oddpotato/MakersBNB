@@ -6,7 +6,7 @@ body {
 main {
   text-align: center;
   display: block;
-  padding: 48px 0;
+  padding: 48px 0 124px;
 }
 
 main.paragraph {
@@ -22,7 +22,7 @@ main.paragraph {
 h1 {
   width: 100%; 
   text-align: center;
-  margin: 0 auto;
+  margin: 16px auto;
   font-family: 'Staatliches', cursive;  
   font-size: 300%;
 }
@@ -30,6 +30,12 @@ h1 {
 h2 {
   font-family: 'Staatliches', cursive;
   font-size: 225%;
+  margin: 0 auto;
+}
+
+h3 {
+  font-family: 'Staatliches', cursive;
+  font-size: 160%;
 }
 
 nav {
@@ -134,6 +140,32 @@ input.login {
   cursor: pointer;
 }
 
+.about-team-section {
+  width: 80%;
+  margin: 48px auto 24px;
+}
+
+.about-team-desc {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.about-area {
+  padding: 0 124px 124px;
+}
+
+.about-section {
+  padding: 0 0 0 32px;
+  float:left;
+  width: 45%;
+  height: 10em;
+}
+
+.about-desc {
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 #or-maybe {
   margin: 0 auto;
 }
@@ -145,12 +177,3 @@ input.login {
 #listings {
   margin: auto;
 }
-
-#h3 {
-  width: 80%; 
-  text-align: left;
-  margin: 0 auto;
-  font-family: 'Staatliches', cursive;  
-  font-size: 200%;
-}
-
