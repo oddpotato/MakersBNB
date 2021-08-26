@@ -9,6 +9,16 @@ main {
   padding: 48px 0;
 }
 
+main.paragraph {
+  text-align: left !important;
+  font-family: 'Staatliches', cursive;  
+  font-size: 100%;
+  display: contents;
+  width: 80%; 
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
 h1 {
   width: 100%; 
   text-align: center;
@@ -164,6 +174,7 @@ input {
   font-size: 200%;
 }
 
+<<<<<<< HEAD
 #paragraph {
   display: contents;
   width: 80%; 
@@ -173,3 +184,5 @@ input {
   font-size: 100%;
 }
 >>>>>>> 55d3ff1 (can't make paragraph left)
+=======
+>>>>>>> 73ac23e (css doesn't work)
