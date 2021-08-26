@@ -44,6 +44,15 @@ class ApplicationController < Sinatra::Base
 
     get '/listings' do
       @listings = Listing.all
+      @available_from = params[:available_from] || "2021-08-26"
+      @available_to = params[:available_to] || "2021-08-27"
+      @date_range = [*@available_from..@available_to]
+      @result = Listing.where(dates_available: @date_range)
+      # @result = Listing.where(:dates_available => @date_range)
+      # p result
+      # @result = Listing.select(:dates_available)
+      # p "hello"
+      p @result
       erb :'listings/index'
     end
 
