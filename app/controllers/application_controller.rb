@@ -44,7 +44,7 @@ class ApplicationController < Sinatra::Base
     end
 
     get '/listings/new' do
-      "this is where new listings will be added"
+      erb :'listings/new'
     end
   
     post '/listings/:id' do

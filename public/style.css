@@ -33,12 +33,20 @@ nav li {
     font-size: 140%;
 }
 
-label.login {
-  display: block;
+form {
+  padding: 24px;
 }
 
-input.login {
-  margin: 8px;
+label {
+  display: block;
+  font-family: 'Staatliches', cursive;
+  font-size: 225%;
+  font-weight: normal;
+  margin: 8px 0;
+}
+
+input {
+  margin: 0 0 8px 0;
   padding: 4px;
 }
 
@@ -134,4 +142,15 @@ input.login {
 
 #listings {
   margin: auto;
+}
+
+#list-new {
+  width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#list-desc {
+  height: 120px;
+  width: 400px;
 }
