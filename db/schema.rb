@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_08_24_100304) do
   create_table "bookings", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "listing_id", null: false
-    t.string "date_booked", null: false
+    t.date "date_booked", null: false
     t.boolean "confirmed"
     t.index ["listing_id"], name: "index_bookings_on_listing_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
@@ -29,7 +29,8 @@ ActiveRecord::Schema.define(version: 2021_08_24_100304) do
     t.float "price"
     t.string "title"
     t.string "description"
-    t.string "dates_available", array: true
+    t.date "start_date", null: false
+    t.date "end_date", null: false
     t.index ["user_id"], name: "index_listings_on_user_id"
   end
 

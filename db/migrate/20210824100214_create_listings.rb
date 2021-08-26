@@ -5,7 +5,8 @@ class CreateListings < ActiveRecord::Migration[6.1]
       t.float :price        
       t.string :title
       t.string :description
-      t.string :dates_available, :array => true, :length => 30
+      t.date :start_date, null: false
+      t.date :end_date, null: false
     end
   end
 end

@@ -60,7 +60,8 @@ listings = [
   { title: 'Hobbit Hole',
     description: 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.',
     price: 86.57,
-    dates_available: [9/4/2021],
+    start_date: '2021-9-4',
+    end_date: '2021-10-4',
     user_id: 1
   },
   
@@ -69,7 +70,8 @@ listings = [
 
     In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
     price: 144.57,
-    dates_available: [3/25/2021],
+    start_date: '2021-3-25',
+    end_date: '2021-9-30',
     user_id: 5
   },
 
@@ -80,7 +82,8 @@ listings = [
     
     Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     price: 166.55,
-    dates_available: [7/14/2021],
+    start_date: '2021-12-01',
+    end_date: '2021-12-31',
     user_id: 10
   },
 
@@ -88,29 +91,29 @@ listings = [
 
 bookings = [
 
-    { user_id: 10,
-    listing_id: 1,
-    date_booked: 12/26/2021,
-    confirmed: true,
-    },
+  { user_id: 10,
+  listing_id: 1,
+  date_booked: '2021-12-26',
+  confirmed: true,
+  },
 
-    { user_id: 2,
-    listing_id: 3,
-    date_booked: 9/21/2021,
-    confirmed: false,
-    },
+  { user_id: 2,
+  listing_id: 3,
+  date_booked: '2021-9-21',
+  confirmed: false,
+  },
 
-    { user_id: 8,
-    listing_id: 2,
-    date_booked: 11/9/2020,
-    },
-    
-    { user_id: 6,
-    listing_id: 1,
-    date_booked: 9/29/2021,
-    confirmed: true,
-    }
-    
+  { user_id: 8,
+  listing_id: 2,
+  date_booked: '2020-10-11',
+  },
+  
+  { user_id: 6,
+  listing_id: 1,
+  date_booked: '2021-11-29',
+  confirmed: true,
+  }
+  
 ]
 
 users.each { |user| User.create(user) }

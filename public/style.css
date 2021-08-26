@@ -195,9 +195,7 @@ input {
 #listings {
   margin: auto;
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 #list-new {
   width: 400px;
   margin: 0 auto;
@@ -208,7 +206,7 @@ input {
   height: 120px;
   width: 400px;
 }
-=======
+ (can't make paragraph left)
 #h3 {
   width: 80%; 
   text-align: left;
@@ -217,7 +215,7 @@ input {
   font-size: 200%;
 }
 
-<<<<<<< HEAD
+ (can't make paragraph left)
 #paragraph {
   display: contents;
   width: 80%; 
@@ -225,9 +223,4 @@ input {
   margin: 0 auto;
   font-family: 'Staatliches', cursive;  
   font-size: 100%;
-}
->>>>>>> 55d3ff1 (can't make paragraph left)
-=======
->>>>>>> 73ac23e (css doesn't work)
-=======
->>>>>>> about
+
