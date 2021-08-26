@@ -20,24 +20,37 @@ class ApplicationController < Sinatra::Base
     register Sinatra::Flash
   
     get '/' do
-      erb :index
-    end 
+      erb :landingpage
+    end
 
-    get '/sessions/new' do
+    get '/login' do
       erb :login
     end
 
-    post '/sessions' do
-      user = nil # User.authenticate(email: params[:email], password: params[:password])
-      if user
-        session[:user_id] = user.id
-        redirect('/listings')      
-      else
-        flash[:notice] = 'Incorrect email or password'
-        redirect('/sessions/new')
-      end
+    get '/sessions/new' do
+         # erb :homepage
+         erb :index
     end
 
+    post '/sessions' do
+      # user = nil # User.authenticate(email: params[:email], password: params[:password])
+      # if user
+        # session[:user_id] = user.id
+        # redirect('/listings')      
+      # else
+      #   flash[:notice] = 'Incorrect email or password'
+      #   redirect('/sessions/new')
+      # end
+      redirect('/homepage')
+    end
+
+    get '/homepage' do
+      
+      erb :homepage
+
+    end
+
+    
     get '/listings' do
       @listings = Listing.all
       @available_from = params[:available_from] || "2021-08-26"
@@ -75,7 +88,8 @@ class ApplicationController < Sinatra::Base
     # check email isn't already in DB
     # assuming no...
       user = User.create(name: params[:name], email: params[:email], password_digest: params[:password])
-      erb :'listings/index'
+      # erb :'listings/index'
+      erb :homepage
     end
   
     run! if app_file == $0

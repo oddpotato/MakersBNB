@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Makers BnB</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Staatliches&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <a href="/"><img class="logo" src="/images/makersbnblogo.png" alt="MakersBNB logo" height="100px"></a>
+      <nav>
+        <ul>
+          <li><a href="/sessions/new">Sign Up</li></a>
+          <li>   |    </li>
+          <li><a href = '/login'>Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1> Book a space </h1>
+      <h2 id="or-maybe">Or Maybe</h2>
+      <form action='/listings/new' method='get'>
+        <input type="submit" id='list' value="List a space" class="btn" >
+      </form>
+      <section class='dates'>
+        <form action='/listings' method='get'>
+          <div class="listings-from">
+            <label for='from'>Available from (DD/MM/YY)</label><br>
+            <input type='date' id ='from' name='available_from'
+                  value="2021-08-24"
+                  min="2021-08-01" max="2040-12-31">
+          </div>
+          <div class="listings-to">
+            <label for='to'>Available to (DD/MM/YY)</label><br>
+            <input type='date' id ='to' 
+                  name='available_to'
+                  value="2021-08-24"
+                  min="2021-08-01" max="2040-12-31">
+          </div>
+          <input id="listing-search" type='submit' value='Search'>
+        </section>
+      </form>
+      <div class="w3-container">
+        <h2>Listings</h2>
+
+          <% if @listings %>
+            <% @listings.each do |listing| %>
+              <div class="w3-card-4" style="width:70%">
+                <h3><%=listing.title%></h3>
+                <div class="w3-container">
+                  <p><%=listing.description%></p>
+                  <p><%=listing.price%></p>
+                </div>
+                <form action='listings/<%=listing.id%>' method='post'>
+                  <input type='hidden' name='id' value="<%=listing.id%>">
+                  <input type='submit' name='<%=listing.id%>'class="w3-button w3-block w3-dark-grey" value="Link Button">
+                </form>
+              </div> 
+            <%end%>
+          <%end%>
+      </div>
+    </main>
+  </body>
+</html>
