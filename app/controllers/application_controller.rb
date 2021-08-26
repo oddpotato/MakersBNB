@@ -50,7 +50,7 @@ class ApplicationController < Sinatra::Base
     post '/listings/new' do
   
       Listing.create(
-        user_id: sessions[:user_id], 
+        user_id: session[:user_id], 
         price: params[:list_price], 
         title: params[:list_title], 
         description: params[:list_desc], 
