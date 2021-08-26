@@ -41,7 +41,7 @@ class ApplicationController < Sinatra::Base
         redirect('/sessions/new')
       end
     end
-    
+
     post "/book" do
       user_id = session[:user_id]
       booking = Booking.create(user_id: params[:user_id], listing_id: params[:listing_id], date_booked: params[:booking_date], confirmed: nil)
@@ -53,10 +53,15 @@ class ApplicationController < Sinatra::Base
     end
       
     post '/signup' do
-    # check email isn't already in DB
-    # assuming no...
-      user = User.create(name: params[:name], email: params[:email], password_digest: params[:password])
-      erb :'listings/index'
+      @email = params[:email]
+      if User.exists?(email: @email)
+        flash[:notice1] = 'Email already in use'
+        redirect('/')
+      else  # assuming no...
+        user = User.create(name: params[:name], email: @email, password_digest: params[:password])
+        session[:user_id] = user.id
+        redirect('/listings')
+      end
     end
 
     
