@@ -1,6 +1,6 @@
 body {
   background-color: #dfe86d;
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 
 main {
@@ -10,15 +10,15 @@ main {
 }
 
 h1 {
-  width: 100%; 
+  width: 100%;
   text-align: center;
   margin: 0 auto;
-  font-family: 'Staatliches', cursive;  
+  font-family: "Staatliches", cursive;
   font-size: 300%;
 }
 
 h2 {
-  font-family: 'Staatliches', cursive;
+  font-family: "Staatliches", cursive;
   font-size: 225%;
 }
 
@@ -28,9 +28,9 @@ nav {
 }
 
 nav li {
-    display: inline;
-    padding: 12px;
-    font-size: 140%;
+  display: inline;
+  padding: 12px;
+  font-size: 140%;
 }
 
 form {
@@ -39,7 +39,7 @@ form {
 
 label {
   display: block;
-  font-family: 'Staatliches', cursive;
+  font-family: "Staatliches", cursive;
   font-size: 225%;
   font-weight: normal;
   margin: 8px 0;
@@ -55,7 +55,7 @@ input {
 }
 
 .dates {
-  display: inline-block; 
+  display: inline-block;
   margin: 40px;
 }
 
@@ -153,4 +153,17 @@ input {
 #list-desc {
   height: 120px;
   width: 400px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
