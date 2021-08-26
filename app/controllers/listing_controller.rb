@@ -1,11 +1,13 @@
 class ListingController < ApplicationController
 
+
+
     get '/listings' do
         @listings = Listing.all
         @date = Time.now.to_date
         erb :'listings/index'
       end
-  
+
       get '/listings/new' do
         erb :'listings/new'
       end
