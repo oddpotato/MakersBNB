@@ -10,6 +10,6 @@ feature 'displays a single listing' do
       visit('/listings')
       click_button('1')
       click_button('Request booking')
-      expect(page).to have_content('hobbithole')
+      expect(page).to have_content("this is where you'll be able to see all your requests")
     end
   end 

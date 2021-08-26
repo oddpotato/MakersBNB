@@ -1,4 +1,7 @@
 class ListingController < ApplicationController
+<<<<<<< HEAD
+end
+=======
 
 get (/listings) { erb :'listings/index' }
 
@@ -8,3 +11,4 @@ def index
 end
 end
 
+>>>>>>> about

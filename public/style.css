@@ -6,6 +6,16 @@ body {
 main {
   text-align: center;
   display: block;
+  padding: 48px 0 124px;
+}
+
+main.paragraph {
+  text-align: left !important;
+  font-family: 'Staatliches', cursive;  
+  font-size: 100%;
+  display: contents;
+  width: 80%; 
+  margin: 0 auto;
   padding: 48px 0;
 }
 
@@ -22,7 +32,7 @@ main.paragraph {
 h1 {
   width: 100%; 
   text-align: center;
-  margin: 0 auto;
+  margin: 16px auto;
   font-family: 'Staatliches', cursive;  
   font-size: 300%;
 }
@@ -30,6 +40,12 @@ h1 {
 h2 {
   font-family: 'Staatliches', cursive;
   font-size: 225%;
+  margin: 0 auto;
+}
+
+h3 {
+  font-family: 'Staatliches', cursive;
+  font-size: 160%;
 }
 
 nav {
@@ -142,6 +158,32 @@ input {
   cursor: pointer;
 }
 
+.about-team-section {
+  width: 80%;
+  margin: 48px auto 24px;
+}
+
+.about-team-desc {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.about-area {
+  padding: 0 124px 124px;
+}
+
+.about-section {
+  padding: 0 0 0 32px;
+  float:left;
+  width: 45%;
+  height: 10em;
+}
+
+.about-desc {
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 #or-maybe {
   margin: 0 auto;
 }
@@ -154,8 +196,6 @@ input {
   margin: auto;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 #list-new {
   width: 400px;
   margin: 0 auto;
@@ -166,9 +206,7 @@ input {
   height: 120px;
   width: 400px;
 }
-=======
-=======
->>>>>>> 55d3ff1 (can't make paragraph left)
+ (can't make paragraph left)
 #h3 {
   width: 80%; 
   text-align: left;
@@ -177,10 +215,7 @@ input {
   font-size: 200%;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 55d3ff1 (can't make paragraph left)
+ (can't make paragraph left)
 #paragraph {
   display: contents;
   width: 80%; 
@@ -188,11 +223,4 @@ input {
   margin: 0 auto;
   font-family: 'Staatliches', cursive;  
   font-size: 100%;
-<<<<<<< HEAD
-}
->>>>>>> 55d3ff1 (can't make paragraph left)
-=======
->>>>>>> 73ac23e (css doesn't work)
-=======
-}
->>>>>>> 55d3ff1 (can't make paragraph left)
+
