@@ -40,11 +40,11 @@ class ApplicationController < Sinatra::Base
 
     get '/listings' do
       @listings = Listing.all
-      erb :listings
+      erb :'listings/index'
     end
 
     get '/listings/new' do
-      "this is where new listings will be added"
+      erb :'listings/new'
     end
   
     post '/listings/:id' do
@@ -66,7 +66,7 @@ class ApplicationController < Sinatra::Base
     # check email isn't already in DB
     # assuming no...
       user = User.create(name: params[:name], email: params[:email], password_digest: params[:password])
-      erb :listings
+      erb :'listings/index'
     end
   
     run! if app_file == $0
