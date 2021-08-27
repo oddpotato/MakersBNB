@@ -40,8 +40,8 @@ class ListingController < ApplicationController
           price: params[:list_price], 
           title: params[:list_title], 
           description: params[:list_desc], 
-          start_date: params[:list_date],
-          end_date: params[:list_date]
+          start_date: params[:list_from],
+          end_date: params[:list_to]
         )
         redirect('/listings')
       end
