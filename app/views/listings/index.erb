@@ -32,17 +32,17 @@
           </form>
 
       <section class='dates'>
-        <form action='/listings' method='get'>
+        <form action='/listings/filtered' method='post'>
           <div class="listings-from">
-            <label for='from'>Available from (DD/MM/YY)</label><br>
-            <input type='date' id ='from' name='available_from'
+            <label for='from'>Available from <%= @date %></label><br>
+            <input type='date' id ='from' name='start_date'
                   value="2021-08-24"
                   min="2021-08-01" max="2040-12-31">
           </div>
           <div class="listings-to">
-            <label for='to'>Available to (DD/MM/YY)</label><br>
+            <label for='to'>Available to (31/12/40)</label><br>
             <input type='date' id ='to' 
-                  name='available_to'
+                  name='end_date'
                   value="2021-08-24"
                   min="2021-08-01" max="2040-12-31">
           </div>
@@ -57,6 +57,8 @@
               <div class="w3-container">
                 <p><%=listing.description%></p>
                 <p><%=listing.price%></p>
+                <p>Available from <%=listing.start_date%></p>
+                <p>Available until <%=listing.end_date%></p>
               </div>
               <form action='listings/<%=listing.id%>' method='post'>
                 <input type='hidden' name='id' value="<%=listing.id%>">
