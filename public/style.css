@@ -97,6 +97,13 @@ input {
   margin: 20px;
 }
 
+.listings-view {
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  width: 800px;
+}
+
 #listing-search {
   display: block;
   float: left;
@@ -207,8 +214,6 @@ input {
   width: 400px;
 }
 
-
- (can't make paragraph left)
 #h3 {
   width: 80%; 
   text-align: left;
@@ -217,7 +222,6 @@ input {
   font-size: 200%;
 }
 
- (can't make paragraph left)
 #paragraph {
   display: contents;
   width: 80%; 
