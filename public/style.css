@@ -154,6 +154,19 @@ input {
   text-decoration: none;
 }
 
+.btn2 {
+  display: inline;ß
+  margin: 12px auto;
+  background: pink;
+  background-image: linear-gradient(to bottom, purple, pink);
+  border-radius: 12px;
+  font-family: Arial;
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
 .btn:hover {
   background: #3cfc89;
   background-image: -webkit-linear-gradient(top, #3cfc89, #3498db);
