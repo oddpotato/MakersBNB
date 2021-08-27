@@ -30,15 +30,17 @@
         <div class="column" style="float: left;
           width: 50%;">
           <h2>Requests I've made</h2>
-          <%= @listing.title%>
+          <%= @listing.title%></br>
+          <%= @booking.date_booked%></br>
           <%= @booking.confirmed%>
         </div>
 
         <div class="column" style="float: left;
           width: 50%;">
            <h2>Requests I've received</h2>
-           <%= @listings_posted.title %>
-          <%= @booking_requests.date_booked %>
+           <%= @listings_posted.title %></br>
+          <%= @booking_requests.date_booked %></br>
+          <%= @booking_requests.confirmed %>
            </div>
 
         </div>
