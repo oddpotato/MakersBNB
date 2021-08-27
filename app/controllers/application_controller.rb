@@ -48,10 +48,10 @@ class ApplicationController < Sinatra::Base
 
   get "/requests" do
     @booking = Booking.find_by(user_id: session[:user_id])
-    @listing = Listing.find_by(id: @booking.listing_id)
+    @listing = Listing.find_by(id: @booking.listing_id) if @booking 
 
     @listings_posted = Listing.find_by(user_id: session[:user_id])
-    @booking_requests = Booking.find_by(listing_id: @listings_posted.id)
+    @booking_requests = Booking.find_by(listing_id: @listings_posted.id) if @listings_posted
 
     erb :requests
   end

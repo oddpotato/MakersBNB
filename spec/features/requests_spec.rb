@@ -14,7 +14,5 @@ feature 'requests page' do
     expect(page).to have_content('Downing Street')
     expect(page).to have_content('2021-09-21')
     expect(page).to have_content('null')
-  
   end  
-
 end
