@@ -30,26 +30,30 @@
         <div class="column" style="float: left;
           width: 50%;">
           <h2>Requests I've made</h2>
-          <%= @listing.title%></br>
-          <%= @booking.date_booked%></br>
-          <%= @booking.confirmed%>
+          <% if @booking %>
+            <%= @listing.title%></br>
+            <%= @booking.date_booked%></br>
+            <%= @booking.confirmed%>
+          <% end %>
         </div>
 
         <div class="column" style="float: left;
           width: 50%;">
-           <h2>Requests I've received</h2>
-           <%= @listings_posted.title %></br>
-          <%= @booking_requests.date_booked %></br>
-          <%= @booking_requests.confirmed %> </br>
-          <%# <% if @booking_requests.confirmed %>
-          <form action='/requests' method='get' style="display:inline">
-            <input type="submit" id='list' value="Confirm" class="btn2" >
-          </form>
-          <form action='/requests' method='get' style="display:inline">
-            <input type="submit" id='list' value="Reject" class="btn2" >
-          </form>
-          <%# <%end%>
-           </div>
+          <h2>Requests I've received</h2>
+          <% if @booking_requests %>
+            <%= @listings_posted.title %></br>
+            <%= @booking_requests.date_booked %></br>
+            <% if @booking_requests.confirmed == 'pending' %>
+              <form action='/requests' method='get' style="display:inline">
+                <input type="submit" id='list' value="Confirm" class="btn2" >
+              </form>
+              <form action='/requests' method='get' style="display:inline">
+                <input type="submit" id='list' value="Reject" class="btn2" >
+              </form>
+            <%else%>
+              <%= @booking_requests.confirmed %> 
+            <% end %>
+          <% end %>
         </div>
       </div>
     </main>
