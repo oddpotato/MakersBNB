@@ -20,7 +20,11 @@ class ApplicationController < Sinatra::Base
     register Sinatra::Flash
   
     get '/' do
-      erb :index
+      if session[:user_id]
+        redirect('/requests')  
+      else
+        erb :index
+      end
     end 
 
     get '/about' do
