@@ -56,8 +56,8 @@ class ApplicationController < Sinatra::Base
       @booking = Booking.find_by(user_id: session[:user_id])
       @listing = Listing.find_by(id: @booking.listing_id)
 
-      @listings_posted = Listing.where(user_id: session[:user_id])
-      @booking_requests = Booking.find_by(listing_id: @listings_posted.ids)
+      @listings_posted = Listing.find_by(user_id: session[:user_id])
+      @booking_requests = Booking.find_by(listing_id: @listings_posted.id)
 
       erb :requests
     end
