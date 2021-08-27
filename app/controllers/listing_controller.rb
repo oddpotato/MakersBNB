@@ -27,7 +27,6 @@ get '/listings' do
     erb :'listings/index'
   end
 
-
   get '/listings/new' do
     erb :'listings/new'
   end
