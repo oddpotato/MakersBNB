@@ -100,8 +100,6 @@ input {
 .listings-view {
   display: block;
   margin: 0 auto;
-  text-align: left;
-  width: 800px;
 }
 
 #listing-search {
