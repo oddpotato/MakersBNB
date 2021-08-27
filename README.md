@@ -47,3 +47,17 @@ So that I can control who books my space.
 As a host
 I want my listings to be available until booking is confirmed
 So that I can maximise my potential earnings.
+
+
+***RESETTING THE DBS***
+
+Step 1. Open postgres with /psql in the command line
+Step 2. Type '\c makersbnb_test' or '\c makersbnb' to connect to the correct db
+Step 3. Type 'TRUNCATE USERS RESTART IDENTITY CASCADE;' to clear your tables
+Step 4. Exit psql
+Step 5. In terminal, type 'rake db:migrate:redo' - this will update your table schema
+Step 6. In terminal, type 'rake de:seed' - this should not produce anything in your terminal but should repopulate your db
+
+Repeat steps for second db (be that _test or just makersbnb) - remember to change environments with the following:
+
+export RAKE_ENV=production (or development as the case may be)

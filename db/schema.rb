@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_08_24_100304) do
     t.bigint "user_id", null: false
     t.bigint "listing_id", null: false
     t.date "date_booked", null: false
-    t.boolean "confirmed"
+    t.string "confirmed"
     t.index ["listing_id"], name: "index_bookings_on_listing_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
