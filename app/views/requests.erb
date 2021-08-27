@@ -31,10 +31,15 @@
           width: 50%;">
           <h2>Requests I've made</h2>
           <%= @listing.title%>
+          <%= @booking.confirmed%>
         </div>
 
         <div class="column" style="float: left;
-          width: 50%;">Requests I've received</div>
+          width: 50%;">
+           <h2>Requests I've received</h2>
+          <%= @booking_requests.date_booked %>
+           </div>
+
         </div>
       </div>
     </main>
