@@ -11,7 +11,7 @@ class ListingController < ApplicationController
     end
   end
 
-get '/listings' do
+  get '/listings' do
     @listings = Listing.all
     @date = Time.now.to_date
     erb :'listings/index'
