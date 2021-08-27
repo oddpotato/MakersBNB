@@ -3,7 +3,7 @@ require './lib/listing.rb'
 class ListingController < ApplicationController
 
     def filter_listings(start_date = @start_date, end_date = @end_date)
-        @list_of_filter_listings = []
+        @list_of_filtered_listings = []
         @listings.each do |listing|
           if (listing.start_date > start_date) || (listing.end_date < end_date)
             filter_listings.append(listing)

@@ -6,7 +6,7 @@ feature 'new listing' do
       fill_in('password', with: '9GwfNyEE')
       click_on('Submit')
       visit('/listings/new')
-      fill_in('Title', with: 'Treehouse')
+      fill_in('list_title', with: 'Treehouse')
       fill_in('Description', with: 'Twiggy')
       fill_in('Price', with: '15')
       fill_in('list-date', with: '31-10-2021')
