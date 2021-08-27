@@ -196,7 +196,7 @@ input {
   padding: 0 0 0 32px;
   float:left;
   width: 45%;
-  height: 10em;
+  
 }
 
 .about-desc {
@@ -242,4 +242,4 @@ input {
   margin: 0 auto;
   font-family: 'Staatliches', cursive;  
   font-size: 100%;
-
+}

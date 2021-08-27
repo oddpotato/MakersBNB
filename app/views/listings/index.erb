@@ -40,7 +40,7 @@
                   min="2021-08-01" max="2040-12-31">
           </div>
           <div class="listings-to">
-            <label for='to'>Available to (31/12/40)</label><br>
+            <label for='to'>Available to 31/12/40</label><br>
             <input type='date' id ='to' 
                   name='end_date'
                   value="2021-08-24"
@@ -51,8 +51,10 @@
       </form>
       <div class="w3-container">
         <h2>Listings</h2>
+        <div class="about-team-section">
           <% @listings.each do |listing| %>
-            <div class="w3-card-4" style="width:70%">
+            <div class="w3-card-4">
+            <div class="listing-view">
               <h3><%=listing.title%></h3>
               <div class="w3-container">
                 <p><%=listing.description%></p>
@@ -60,10 +62,12 @@
                 <p>Available from <%=listing.start_date%></p>
                 <p>Available until <%=listing.end_date%></p>
               </div>
+              </div>
               <form action='listings/<%=listing.id%>' method='post'>
                 <input type='hidden' name='id' value="<%=listing.id%>">
                 <input type='submit' name='<%=listing.id%>'class="w3-button w3-block w3-dark-grey" value="Link Button">
               </form>
+              
             </div> 
           <%end%>
       </div>

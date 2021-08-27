@@ -16,17 +16,16 @@ gem 'sinatra-flash'
 
 group :development, :test do
   gem 'pry'
-  gem "rubocop", "0.79.0"
   gem 'rack'
+  gem "rubocop", "0.79.0"
   gem 'simplecov', require: false, group: :test
   gem 'simplecov-console', require: false
 end
 
-
 gem 'activerecord', '6.1.4'
 gem 'bcrypt'
+gem 'by_star'
 gem 'dotenv'
 gem 'nokogiri'
 gem 'require_all'
 gem 'webrick'
-gem 'by_star'
