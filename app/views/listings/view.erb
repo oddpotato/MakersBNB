@@ -29,8 +29,8 @@
     <p>£<%=@listing.price%> per night</p>
     <form action='/book' method='post'>
       <input type='date' name='booking_date'
-                min='<%=@listing.dates_available.first%>'
-                max='<%=@listing.dates_available.last%>'>
+                min='<%=@listing.start_date%>'
+                max='<%=@listing.end_date%>'>
       <input type='hidden' name='listing_id' value="<%=@listing.id%>">
       <input type='hidden' name='user_id' value="<%=@user_id%>">
       <input id="request-submit" class="btn" type='submit' value='Request booking'>
