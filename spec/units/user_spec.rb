@@ -1,4 +1,5 @@
 require 'user'
+require './app/controllers/application_controller.rb'
 
 describe User do
   describe '.new' do
