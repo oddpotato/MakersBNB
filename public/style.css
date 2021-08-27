@@ -206,6 +206,23 @@ input {
   height: 120px;
   width: 400px;
 }
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
  (can't make paragraph left)
 #h3 {
   width: 80%; 

@@ -35,7 +35,7 @@ class ApplicationController < Sinatra::Base
       user = User.find_by(email: params[:email])
       if user && user.password_digest == params[:password]
         session[:user_id] = user.id
-        redirect('/listings')      
+        redirect('/requests')      
       else
         flash[:notice] = 'Incorrect email or password'
         redirect('/sessions/new')
@@ -49,7 +49,7 @@ class ApplicationController < Sinatra::Base
     end
 
     get "/requests" do
-      "this is where you'll be able to see all your requests"
+      erb :requests
     end
       
     post '/signup' do
@@ -60,7 +60,7 @@ class ApplicationController < Sinatra::Base
       else  # assuming no...
         user = User.create(name: params[:name], email: @email, password_digest: params[:password])
         session[:user_id] = user.id
-        redirect('/listings')
+        redirect('/requests')
       end
     end
 
