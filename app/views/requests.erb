@@ -41,10 +41,15 @@
            <%= @listings_posted.title %></br>
           <%= @booking_requests.date_booked %></br>
           <%= @booking_requests.confirmed %> </br>
-          <% if @booking_requests.confirmed %>
-          button
-          <%end%>
-          <%= @pending_requests%>
+          <%# <% if @booking_requests.confirmed %>
+          <form action='/requests' method='get'>
+            <input type="submit" id='list' value="Confirm" class="btn" >
+          </form>
+          <form action='/requests' method='get'>
+            <input type="submit" id='list' value="Reject" class="btn" >
+          </form>
+          <%# <%end%>
+    
 
            </div>
 
