@@ -53,6 +53,8 @@ class ApplicationController < Sinatra::Base
     # end
 
     get "/requests" do
+      @booking = Booking.find_by(user_id: session[:user_id])
+      @listing = Listing.find_by(id: @booking.listing_id)
       erb :requests
     end
       
